@@ -19,13 +19,13 @@ const AVATAR_MAP = {
 function getAvatarPath(character) {
   // 精确匹配
   if (AVATAR_MAP[character]) {
-    return `/images/avatars/${AVATAR_MAP[character]}`
+    return `./images/avatars/${AVATAR_MAP[character]}`
   }
   // 合体角色如 "佟湘玉/白展堂" → 取第一个
   if (character.includes('/')) {
     const first = character.split('/')[0].trim()
     if (AVATAR_MAP[first]) {
-      return `/images/avatars/${AVATAR_MAP[first]}`
+      return `./images/avatars/${AVATAR_MAP[first]}`
     }
   }
   return null

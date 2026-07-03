@@ -1,6 +1,6 @@
 {
   "logo": {
-    "src": "/images/logo.png",
+    "src": "./images/logo.png",
     "alt": "武林外传",
     "comment": "把logo图片放到 public/images/logo.png 即可替换"
   },
