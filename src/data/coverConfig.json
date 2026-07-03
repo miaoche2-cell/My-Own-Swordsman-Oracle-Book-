@@ -1,0 +1,10 @@
+{
+  "logo": {
+    "src": "/images/logo.png",
+    "alt": "武林外传",
+    "comment": "把logo图片放到 public/images/logo.png 即可替换"
+  },
+  "subtitle": "答案之书",
+  "hint": "杀青散没有解药，人生没有固定答案",
+  "bookTitle": "武林外传答案之书"
+}

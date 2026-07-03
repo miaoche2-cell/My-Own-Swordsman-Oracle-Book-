@@ -1,0 +1,286 @@
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 桌面背景 */
+.desk {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, var(--bg-wood-light) 0%, var(--bg-wood) 60%, #1a0f08 100%);
+  z-index: 0;
+}
+
+/* ====== 古籍翻开 ====== */
+.bookSpread {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  max-width: 640px;
+  width: 92%;
+  min-height: 340px;
+  background: linear-gradient(
+    180deg,
+    #faf3e6 0%,
+    #f5e6d3 40%,
+    #eed9be 100%
+  );
+  border-radius: 2px 6px 6px 2px;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.35),
+    2px 0 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* 书中缝 */
+.bookSpread::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,0.12) 10%,
+    rgba(0,0,0,0.12) 90%,
+    transparent 100%
+  );
+  z-index: 3;
+}
+
+/* ====== 左页：人物头像 ====== */
+.leftPage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.03) 0%,
+    rgba(0,0,0,0.01) 30%,
+    transparent 100%
+  );
+}
+
+.avatarWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 头像出场特效：淡入 + 金晕 */
+.avatarImg {
+  max-width: 160px;
+  max-height: 220px;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: avatarReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+/* 头像金晕光效 */
+.avatarGlow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(201,169,110,0.3) 0%, transparent 70%);
+  opacity: 0;
+  animation: glowReveal 1.2s ease-out 0.2s forwards;
+  pointer-events: none;
+}
+
+@keyframes avatarReveal {
+  0%   { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glowReveal {
+  0%   { opacity: 0; transform: scale(0.8); }
+  50%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+/* 回退：logo 占位 */
+.avatarPlaceholder {
+  max-width: 140px;
+  max-height: 140px;
+  opacity: 0;
+  animation: avatarReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+  filter: grayscale(0.3);
+}
+
+/* ====== 右页：正文 + 出处 ====== */
+.rightPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+  position: relative;
+}
+
+.quote {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 2.2;
+  color: var(--color-ink);
+  letter-spacing: 1px;
+  text-indent: 2em;
+  position: relative;
+  padding: 0 var(--space-sm);
+}
+
+.quote::before {
+  content: '『';
+  font-size: 1.4rem;
+  color: var(--color-vermilion);
+  opacity: 0.35;
+  position: absolute;
+  left: -0.3em;
+  top: -0.1em;
+}
+
+.quote::after {
+  content: '』';
+  font-size: 1.4rem;
+  color: var(--color-vermilion);
+  opacity: 0.35;
+  vertical-align: -0.1em;
+  margin-left: 2px;
+}
+
+/* 出处 — 右下角 */
+.source {
+  position: absolute;
+  right: var(--space-xl);
+  bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.episodeLabel {
+  font-size: 0.85rem;
+  color: var(--color-vermilion);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.episodeTitle {
+  font-size: 0.82rem;
+  color: var(--color-ink-light);
+  opacity: 0.55;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+/* ====== 操作按钮 ====== */
+.actions {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+.btnBack {
+  padding: 8px 24px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  opacity: 0.5;
+  background: transparent;
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: var(--radius-sm);
+  letter-spacing: 2px;
+  transition: all var(--transition-normal);
+}
+
+.btnBack:hover {
+  opacity: 0.85;
+  border-color: rgba(201,169,110,0.4);
+  background: rgba(201,169,110,0.08);
+}
+
+/* ====== 响应式 ====== */
+@media (max-width: 540px) {
+  .bookSpread {
+    flex-direction: column;
+    max-width: 340px;
+    min-height: auto;
+  }
+
+  .bookSpread::after {
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0,0,0,0.1) 20%,
+      rgba(0,0,0,0.1) 80%,
+      transparent 100%
+    );
+  }
+
+  .leftPage {
+    padding: var(--space-lg) var(--space-lg) var(--space-sm);
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.03) 0%,
+      transparent 100%
+    );
+  }
+
+  .avatarImg {
+    max-width: 100px;
+    max-height: 140px;
+  }
+
+  .avatarPlaceholder {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .rightPage {
+    padding: var(--space-md) var(--space-lg) 70px;
+  }
+
+  .quote {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .source {
+    right: var(--space-lg);
+    bottom: var(--space-md);
+  }
+
+  .actions {
+    margin-top: var(--space-lg);
+  }
+}

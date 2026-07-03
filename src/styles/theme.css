@@ -1,0 +1,99 @@
+/* ====== 武林外传答案之书 — 古风主题变量 ====== */
+
+:root {
+  /* 核心色板 */
+  --color-paper: #f5e6d3;
+  --color-paper-dark: #e8d5b8;
+  --color-ink: #2c1810;
+  --color-ink-light: #5c3a2e;
+  --color-vermilion: #c8403a;
+  --color-vermilion-dark: #9a2a25;
+  --color-gold: #c9a96e;
+  --color-gold-light: #e0c88a;
+  --color-indigo: #2c5f7c;
+  --color-indigo-dark: #1a3a52;
+
+  /* 背景 */
+  --bg-wood: #3d2817;
+  --bg-wood-light: #5a3d2b;
+
+  /* 文字 */
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-ink-light);
+  --text-accent: var(--color-vermilion);
+
+  /* 间距 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* 圆角 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* 字体 */
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif;
+  --font-body: 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif;
+
+  /* 阴影 */
+  --shadow-book: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-page: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-gold: 0 0 20px rgba(201, 169, 110, 0.3);
+
+  /* 过渡 */
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* ====== 全局重置 ====== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-wood);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* 去除默认样式 */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-light);
+  border-radius: 3px;
+}
