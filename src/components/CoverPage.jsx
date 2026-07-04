@@ -81,6 +81,11 @@ export default function CoverPage() {
       <p className={`${styles.hint} ${opening ? styles.hiding : ''}`}>
         {coverConfig.hint}
       </p>
+      {coverConfig.hint2 && (
+        <p className={`${styles.hint2} ${opening ? styles.hiding : ''}`}>
+          {coverConfig.hint2}
+        </p>
+      )}
 
       {/* 设计者 */}
       <p className={`${styles.designer} ${opening ? styles.hiding : ''}`}>

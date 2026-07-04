@@ -156,6 +156,12 @@
     "episodeTitle": "郭女侠怒砸同福店 佟掌柜妙点迷路人"
   },
   {
+    "quote": "哈！",
+    "character": "郭芙蓉",
+    "episode": "第一回",
+    "episodeTitle": "郭女侠怒砸同福店 佟掌柜妙点迷路人"
+  },
+  {
     "quote": "练武是为了在真正需要它的时候派上用场。",
     "character": "白展堂",
     "episode": "第二回",
@@ -174,14 +180,8 @@
     "episodeTitle": "掌柜的慰问装病者 跑堂人收拾寻衅女"
   },
   {
-    "quote": "编一个谎言，又圆一个谎言，这种游戏是多么危险。",
+    "quote": "编一个谎言，又圆一个谎言，这种游戏~是多么危险~（唱）",
     "character": "莫小贝",
-    "episode": "第二回",
-    "episodeTitle": "掌柜的慰问装病者 跑堂人收拾寻衅女"
-  },
-  {
-    "quote": "指如疾风，势如闪电。",
-    "character": "白展堂",
     "episode": "第二回",
     "episodeTitle": "掌柜的慰问装病者 跑堂人收拾寻衅女"
   },
@@ -492,6 +492,12 @@
     "episodeTitle": "展红绫千里定扒手 郭芙蓉一心迷盗圣"
   },
   {
+    "quote": "指如疾风，势如闪电。",
+    "character": "白展堂",
+    "episode": "第五回",
+    "episodeTitle": "展红绫千里定扒手 郭芙蓉一心迷盗圣"
+  },
+  {
     "quote": "我是兵，你是贼，抓你是我的天职。",
     "character": "展红绫",
     "episode": "第五回",
@@ -738,7 +744,7 @@
     "episodeTitle": "佟湘玉煞费良苦心 莫小贝梦游影视城"
   },
   {
-    "quote": "Good night！",
+    "quote": "姑奶！",
     "character": "莫小贝",
     "episode": "第九回",
     "episodeTitle": "佟湘玉煞费良苦心 莫小贝梦游影视城"
@@ -1068,7 +1074,7 @@
     "episodeTitle": "为骗财书商耍手段 欲销赃掌柜吓破胆"
   },
   {
-    "quote": "追我呀，追我呀。",
+    "quote": "追我呀，追我呀~",
     "character": "莫小贝",
     "episode": "第十六回",
     "episodeTitle": "为骗财书商耍手段 欲销赃掌柜吓破胆"
@@ -1080,7 +1086,7 @@
     "episodeTitle": "为骗财书商耍手段 欲销赃掌柜吓破胆"
   },
   {
-    "quote": "上面有人！",
+    "quote": "我~上面有人！",
     "character": "范大娘",
     "episode": "第十六回",
     "episodeTitle": "为骗财书商耍手段 欲销赃掌柜吓破胆"
@@ -2272,5 +2278,41 @@
     "character": "佟湘玉",
     "episode": "第八十回",
     "episodeTitle": "燕小六接到调职令 凌腾云夜袭同福店"
+  },
+  {
+    "quote": "哈！",
+    "character": "白展堂",
+    "episode": "放轻松~没有答案就是答案",
+    "episodeTitle": ""
+  },
+  {
+    "quote": "嘿嘿",
+    "character": "莫小贝",
+    "episode": "放轻松~没有答案就是答案",
+    "episodeTitle": ""
+  },
+  {
+    "quote": "哈哈哈！",
+    "character": "佟湘玉",
+    "episode": "放轻松~没有答案就是答案",
+    "episodeTitle": ""
+  },
+  {
+    "quote": "哇呀呀呀呀！",
+    "character": "邢育森",
+    "episode": "放轻松~没有答案就是答案",
+    "episodeTitle": ""
+  },
+  {
+    "quote": "嘿！",
+    "character": "李大嘴",
+    "episode": "放轻松~没有答案就是答案",
+    "episodeTitle": ""
+  },
+  {
+    "quote": "哈哈哈！",
+    "character": "祝无双",
+    "episode": "放轻松~没有答案就是答案",
+    "episodeTitle": ""
   }
 ]

@@ -5,15 +5,15 @@ import styles from './AnswerPage.module.css'
 
 // 角色名 → 头像文件名映射
 const AVATAR_MAP = {
-  '佟湘玉': '佟湘玉.JPG',
-  '白展堂': '白展堂.JPG',
-  '郭芙蓉': '郭芙蓉.JPG',
-  '吕秀才': '吕秀才.JPG',
-  '李大嘴': '李大嘴.JPG',
-  '莫小贝': '莫小贝.JPG',
-  '祝无双': '祝无双.JPG',
-  '燕小六': '燕小六.JPG',
-  '邢育森': '邢育森.JPG',
+  '佟湘玉': '佟湘玉.png',
+  '白展堂': '白展堂.png',
+  '郭芙蓉': '郭芙蓉.png',
+  '吕秀才': '吕秀才.png',
+  '李大嘴': '李大嘴.png',
+  '莫小贝': '莫小贝.png',
+  '祝无双': '祝无双.png',
+  '燕小六': '燕小六.png',
+  '邢育森': '邢育森.png',
 }
 
 function getAvatarPath(character) {

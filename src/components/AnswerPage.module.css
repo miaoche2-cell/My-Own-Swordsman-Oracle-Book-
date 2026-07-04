@@ -224,63 +224,75 @@
   background: rgba(201,169,110,0.08);
 }
 
-/* ====== 响应式 ====== */
+/* ====== 响应式：手机保持横排，缩小元素 ====== */
 @media (max-width: 540px) {
   .bookSpread {
-    flex-direction: column;
-    max-width: 340px;
-    min-height: auto;
-  }
-
-  .bookSpread::after {
-    left: 10%;
-    right: 10%;
-    top: 50%;
-    width: auto;
-    height: 1px;
-    background: linear-gradient(
-      to right,
-      transparent 0%,
-      rgba(0,0,0,0.1) 20%,
-      rgba(0,0,0,0.1) 80%,
-      transparent 100%
-    );
+    max-width: 96%;
+    min-height: 220px;
   }
 
   .leftPage {
-    padding: var(--space-lg) var(--space-lg) var(--space-sm);
+    flex: 0.85;
+    padding: var(--space-md);
     background: linear-gradient(
-      180deg,
+      90deg,
       rgba(0,0,0,0.03) 0%,
+      rgba(0,0,0,0.01) 30%,
       transparent 100%
     );
   }
 
   .avatarImg {
-    max-width: 100px;
-    max-height: 140px;
+    max-width: 90px;
+    max-height: 130px;
   }
 
   .avatarPlaceholder {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 70px;
+    max-height: 70px;
   }
 
   .rightPage {
-    padding: var(--space-md) var(--space-lg) 70px;
+    flex: 1.15;
+    padding: var(--space-md) var(--space-md) 60px;
   }
 
   .quote {
-    font-size: 1rem;
-    line-height: 1.9;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    text-indent: 1.5em;
+    padding: 0;
+  }
+
+  .quote::before {
+    font-size: 1.1rem;
+    left: -0.2em;
+  }
+
+  .quote::after {
+    font-size: 1.1rem;
   }
 
   .source {
-    right: var(--space-lg);
-    bottom: var(--space-md);
+    right: var(--space-md);
+    bottom: var(--space-sm);
+    gap: 1px;
+  }
+
+  .episodeLabel {
+    font-size: 0.72rem;
+  }
+
+  .episodeTitle {
+    font-size: 0.7rem;
   }
 
   .actions {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
+  }
+
+  .btnBack {
+    padding: 6px 18px;
+    font-size: 0.8rem;
   }
 }
