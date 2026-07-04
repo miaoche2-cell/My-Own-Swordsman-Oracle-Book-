@@ -135,9 +135,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+  justify-content: flex-start;
+  padding: var(--space-xl) var(--space-lg) 80px;
   position: relative;
+  overflow: hidden;
 }
 
 .quote {
@@ -149,6 +150,9 @@
   text-indent: 2em;
   position: relative;
   padding: 0 var(--space-sm);
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-height: 100%;
 }
 
 .quote::before {
@@ -156,9 +160,9 @@
   font-size: 1.4rem;
   color: var(--color-vermilion);
   opacity: 0.35;
-  position: absolute;
-  left: -0.3em;
-  top: -0.1em;
+  position: relative;
+  top: -0.05em;
+  margin-right: 2px;
 }
 
 .quote::after {
@@ -254,14 +258,14 @@
 
   .rightPage {
     flex: 1.15;
-    padding: var(--space-md) var(--space-md) 60px;
+    padding: var(--space-md) var(--space-sm) 60px;
   }
 
   .quote {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.85;
     text-indent: 1.5em;
-    padding: 0;
+    padding: 0 4px;
   }
 
   .quote::before {
