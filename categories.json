@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {"key": "sang", "name": "丧类", "description": "消极、沮丧、看透世事的台词"},
+    {"key": "tangping", "name": "躺平类", "description": "放弃挣扎、随遇而安的台词"},
+    {"key": "dushe", "name": "毒舌类", "description": "犀利吐槽、一针见血的台词"},
+    {"key": "zhaxin", "name": "扎心类", "description": "戳中痛点、让人破防的台词"},
+    {"key": "zheli", "name": "哲理类", "description": "有深度、值得思考的台词"},
+    {"key": "zhiyu", "name": "治愈类", "description": "温暖、安慰人心的台词"},
+    {"key": "aiqing", "name": "爱情类", "description": "关于爱情、感情的台词"},
+    {"key": "zhichang", "name": "职场类", "description": "关于工作、人际、社会的台词"},
+    {"key": "rensheng", "name": "人生类", "description": "关于人生感悟、成长体验的台词"},
+    {"key": "qita", "name": "其他", "description": "不属于以上分类但适合做答案的台词"}
+  ],
+  "outputFormat": {
+    "quote": "台词文本",
+    "character": "角色名",
+    "category": "分类key"
+  }
+}
