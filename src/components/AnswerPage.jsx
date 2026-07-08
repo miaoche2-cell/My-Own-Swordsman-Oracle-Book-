@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react'
 import useBookStore from '../store/bookStore'
-import coverConfig from '../data/coverConfig.json'
 import styles from './AnswerPage.module.css'
 
 // 角色名 → 头像文件名映射
 const AVATAR_MAP = {
-  '佟湘玉': '佟湘玉.png',
-  '白展堂': '白展堂.png',
-  '郭芙蓉': '郭芙蓉.png',
-  '吕秀才': '吕秀才.png',
-  '李大嘴': '李大嘴.png',
-  '莫小贝': '莫小贝.png',
-  '祝无双': '祝无双.png',
-  '燕小六': '燕小六.png',
-  '邢育森': '邢育森.png',
+  '佟湘玉': '佟湘玉.jpg',
+  '白展堂': '白展堂.jpg',
+  '郭芙蓉': '郭芙蓉.jpg',
+  '吕秀才': '吕秀才.webp',
+  '李大嘴': '李大嘴.webp',
+  '莫小贝': '莫小贝.jpg',
+  '祝无双': '祝无双.webp',
+  '燕小六': '燕小六.webp',
+  '邢育森': '邢育森.jpg',
 }
 
 function getAvatarPath(character) {
@@ -74,8 +73,8 @@ export default function AnswerPage() {
               </>
             ) : (
               <img
-                src={coverConfig.logo.src}
-                alt={coverConfig.logo.alt}
+                src="./images/avatars/武林外传.png"
+                alt="武林外传"
                 className={styles.avatarPlaceholder}
               />
             )}
